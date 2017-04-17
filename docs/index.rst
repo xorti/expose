@@ -17,6 +17,8 @@ Expose requires:
 
 * PHP 5.3
 
+If you plan to use Expose's default email notifications (``\Expose\Notify\Email`` class), the library ``twig\twig`` is required to render the email message.
+
 Additionally, the default for queue and logging support is a MongoDB database (in the ``\Expose\Log\Mongo`` class, so you'd need Mongo support if you want to use that) but both the Queue handler and Logging can be overwritten with your choice of adapters. The Logger can also be replaced with any other logger class that follows the PSR-3 standard.
 
 **NOTE:** Expose *requires* that you define a logger. Any good security tool that doesn't produce logs is pretty useless, so you're required to set one up. You can use the ``\Expose\Log\Mongo`` class already provided or create your own that matches the ``\Expose\Log`` abstract class structure.
